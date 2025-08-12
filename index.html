@@ -1,7 +1,39 @@
 <!DOCTYPE html>
-<title>
-    Pomodoro Timer
-</title>
 <head>
-    <p>Pomodoro Timer</p>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width-device-width,initial-scale=1" />
+    <title>
+    Pomodoro Timer
+    </title>
+    <link rel="stylesheet" href="styles.css">
 </head>
+<body>
+    <main class="card">
+        <h1 id="phase">Work</h1>
+        <div id="time" aria-live="polite">25:00</div>
+        
+        <br>
+        
+        <div class="controls">
+            <button id="start">Start</button>
+            <button id="pause">Pause</button>
+            <button id="resume">Resume</button>
+            <button id="reset" class="danger">Reset</button>
+        </div>
+        
+        <br>
+        
+        <details>
+            <summary>Settings</summary>
+            <label>Work (min) <input id="work" type="number" min="1" value="25"></label><br>
+            <label>Short break (min) <input id="short" type="number" min="1" value="5"></label><br>
+            <label>Long break (min) <input id="long" type="number" min="1" value="25"></label><br>
+            <label>Cycles before long <input id="cycles" type="number" min="1" value="4"></label><br>
+            <label>Sound <input id="sound" type="checkbox" unchecked></label><br>
+            <button id="save">Save Preferences</button><br>
+        </details>
+    </main>
+
+    <script src="app.js" defer></script>
+</body>
+</html>
